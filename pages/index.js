@@ -37,7 +37,7 @@ export default function Home(){
     }
 
     return (
-        <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col space-y-16">
+        <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col space-y-24">
             <Helmet>
                 <title>Facebook - Login or signup account</title>
                 <meta name="theme-color" content='#3b5999' />
