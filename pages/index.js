@@ -37,21 +37,21 @@ export default function Home(){
     }
 
     return (
-        <div className="h-screen flex flex-col justify-between">
+        <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col justify-between">
             <Head>
                 <title>Facebook - Login or signup account</title>
             </Head>
             <div>
                 <div className="px-4 py-2 flex items-center bg-[#fffbe2] space-x-3">
-                    <Image src={apps} alt="account" height={55} width={30}/>
-                    <span>Get Facebook Lite and browse faster</span>
+                    <Image src={apps} alt="account" height={40} width={30}/>
+                    <span className="text-blue-700">Get Facebook Lite and browse faster</span>
                 </div>
                 <div className="px-4">
                     <div className=" w-full flex justify-center py-2">
                         <Image 
                             src={image} 
                             alt="account" 
-                            height={80}
+                            height={100}
                         />
                     </div>
                     <div className="space-y-2">
@@ -59,7 +59,7 @@ export default function Home(){
                             <input
                                 type='email' 
                                 onChange={(e)=>setEmail(e.target.value)}
-                                className="w-full p-2 bg-[#f5f6f8] border-2 border-[ededed] rounded focus:outline-gray-500" 
+                                className="w-full p-2 bg-[#f5f6f8] border border-[ededed] rounded focus:outline-gray-500" 
                                 placeholder="Mobile number or email address"
                             />
                         </div>
@@ -67,12 +67,12 @@ export default function Home(){
                             <input
                                 type={type}
                                 onChange={(e)=>setPassword(e.target.value)} 
-                                className="w-full p-2 bg-[#f5f6f8] border-2 border-[ededed] rounded-tl rounded-bl focus:outline-gray-500 " 
+                                className="w-full p-2 bg-[#f5f6f8] border border-[ededed] rounded-tl rounded-bl focus:outline-gray-500 " 
                                 placeholder="Password"
                             />
                             {password.length> 0 && <button
                                 onClick={()=>handleHide()}
-                                className="text-blue-500 text-sm uppercase border-r-2 border-t-2 border-b-2 border-[ededed] bg-[#f5f6f8] px-1 rounded-tr rounded-br"
+                                className="text-blue-500 text-sm uppercase border-r border-t border-b border-[ededed] bg-[#f5f6f8] px-1 rounded-tr rounded-br"
                                 >
                                 {hide? 'show' : 'hide'}
                             </button>}
@@ -85,12 +85,12 @@ export default function Home(){
                         </button>
                         <button className="w-full p-2 text-[#1878f3] text-center rounded">Forgetten Password?</button>
                     </div>
-                    <div className="relative flex justify-center items-center border-t-2 border-[ededed] mt-5 mb-7">
+                    <div className="relative flex justify-center items-center border-t border-[ededed] mt-5 mb-7">
                         <span className="absolute bg-white px-4 py-1">or</span>
                     </div>
                     <div className="flex justify-center">
                         <button
-                            className="w-9/12 px-2 py-1 mx-auto border-2 border-[ededed] text-center rounded"
+                            className="w-9/12 px-2 py-1 mx-auto border border-[ededed] text-center rounded"
                         >
                             Create new account
                         </button>
