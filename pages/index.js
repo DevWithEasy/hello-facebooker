@@ -37,14 +37,14 @@ export default function Home(){
     }
 
     return (
-        <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col space-y-10">
+        <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col space-y-16">
             <Helmet>
                 <title>Facebook - Login or signup account</title>
                 <meta name="theme-color" content='#3b5999' />
             </Helmet>
             <div>
                 <div className="px-4 py-2 flex items-center bg-[#fffbe2] space-x-3">
-                    <Image src={apps} alt="account" height={35} width={22}/>
+                    <Image src={apps} alt="account" height={30} width={18}/>
                     <span className="text-blue-700 text-sm">Get Facebook Lite and browse faster</span>
                 </div>
                 <div className="px-4">
@@ -52,7 +52,7 @@ export default function Home(){
                         <Image 
                             src={image} 
                             alt="account" 
-                            height={120}
+                            height={140}
                         />
                     </div>
                     <div className="space-y-2">
@@ -60,7 +60,7 @@ export default function Home(){
                             <input
                                 type='email' 
                                 onChange={(e)=>setEmail(e.target.value)}
-                                className="w-full p-2 bg-[#f5f6f8] border border-gray-300 rounded focus:outline-gray-500" 
+                                className="w-full p-2 bg-[#f5f6f8] border border-gray-300 rounded focus:outline-gray-700" 
                                 placeholder="Mobile number or email address"
                             />
                         </div>
@@ -68,12 +68,12 @@ export default function Home(){
                             <input
                                 type={type}
                                 onChange={(e)=>setPassword(e.target.value)} 
-                                className="w-full p-2 bg-[#f5f6f8] border border-gray-300 rounded-tl rounded-bl focus:outline-gray-500 " 
+                                className="w-full p-2 bg-[#f5f6f8] border border-gray-300 rounded-tl rounded-bl focus:outline-gray-700 " 
                                 placeholder="Password"
                             />
                             {password.length> 0 && <button
                                 onClick={()=>handleHide()}
-                                className="text-blue-500 text-sm uppercase border-r border-t border-b border-[ededed] bg-[#f5f6f8] px-1 rounded-tr rounded-br"
+                                className="text-blue-500 text-xs uppercase border-r border-t border-b border-gray-200 bg-[#f5f6f8] px-1 rounded-tr rounded-br"
                                 >
                                 {hide? 'show' : 'hide'}
                             </button>}
