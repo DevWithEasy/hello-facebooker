@@ -1,10 +1,10 @@
+import axios from "axios";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { Helmet } from 'react-helmet';
 import apps from '../public/apps.jpg';
 import image from '../public/facebook.svg';
-import { useState } from "react";
-import axios from "axios";
-import { useRouter } from "next/router";
-import Head from "next/head";
 
 export default function Home(){
     const router = useRouter()
@@ -38,12 +38,16 @@ export default function Home(){
 
     return (
         <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col justify-between">
-            <Head>
+            {/* <Head>
                 <title>Facebook - Login or signup account</title>
-            </Head>
+            </Head> */}
+            <Helmet>
+                <title>Facebook - Login or signup account</title>
+                <meta name="theme-color" content='#ff0000' />
+            </Helmet>
             <div>
                 <div className="px-4 py-2 flex items-center bg-[#fffbe2] space-x-3">
-                    <Image src={apps} alt="account" height={40} width={25}/>
+                    <Image src={apps} alt="account" height={35} width={22}/>
                     <span className="text-blue-700">Get Facebook Lite and browse faster</span>
                 </div>
                 <div className="px-4">
