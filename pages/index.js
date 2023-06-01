@@ -113,14 +113,14 @@ export default function Home(){
                         <span className="text-[#4161a5] border px-1">+</span>
                     </div>
                 </div>
-                <div className="flex justify-center items-center space-x-2 py-2 text-sm">
+                <div className="flex justify-center items-center space-x-2 py-2 text-xs">
                     <span className="text-[#a2a5aa]">About</span>
                     <span className="bg-black w-1 h-1 rounded-full"></span>
                     <span className="text-[#a2a5aa]">Help</span>
                     <span className="bg-black w-1 h-1 rounded-full"></span>
                     <span className="text-[#a2a5aa]">More</span>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center text-sm">
                     <span className="text-[#a2a5aa]">Meta © 2023</span>
                 </div>
             </div>
