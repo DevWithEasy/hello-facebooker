@@ -43,7 +43,7 @@ export default function Home(){
             </Head>
             <div>
                 <div className="px-4 py-2 flex items-center bg-[#fffbe2] space-x-3">
-                    <Image src={apps} alt="account" height={40} width={30}/>
+                    <Image src={apps} alt="account" height={40} width={25}/>
                     <span className="text-blue-700">Get Facebook Lite and browse faster</span>
                 </div>
                 <div className="px-4">
@@ -51,7 +51,7 @@ export default function Home(){
                         <Image 
                             src={image} 
                             alt="account" 
-                            height={100}
+                            height={120}
                         />
                     </div>
                     <div className="space-y-2">
