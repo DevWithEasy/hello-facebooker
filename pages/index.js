@@ -38,17 +38,14 @@ export default function Home(){
 
     return (
         <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col justify-between">
-            {/* <Head>
-                <title>Facebook - Login or signup account</title>
-            </Head> */}
             <Helmet>
                 <title>Facebook - Login or signup account</title>
-                <meta name="theme-color" content='#ff0000' />
+                <meta name="theme-color" content='#3b5999' />
             </Helmet>
             <div>
                 <div className="px-4 py-2 flex items-center bg-[#fffbe2] space-x-3">
                     <Image src={apps} alt="account" height={35} width={22}/>
-                    <span className="text-blue-700">Get Facebook Lite and browse faster</span>
+                    <span className="text-blue-700 text-sm">Get Facebook Lite and browse faster</span>
                 </div>
                 <div className="px-4">
                     <div className=" w-full flex justify-center py-2">
@@ -101,8 +98,8 @@ export default function Home(){
                     </div>
                 </div>
             </div>
-            <div className="py-5">
-                <div className="w-10/12 mx-auto flex justify-between text-sm">
+            <div className="mb-10">
+                <div className="w-10/12 mx-auto flex justify-between text-xs">
                     <div className="w-1/2 flex flex-col justify-center items-center">
                         <span className="text-[#a2a5aa]">English (UK)</span>
                         <span className="text-[#4161a5]">অসমীয়া</span>
