@@ -37,7 +37,7 @@ export default function Home(){
     }
 
     return (
-        <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col justify-between">
+        <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col space-y-10">
             <Helmet>
                 <title>Facebook - Login or signup account</title>
                 <meta name="theme-color" content='#3b5999' />
@@ -60,7 +60,7 @@ export default function Home(){
                             <input
                                 type='email' 
                                 onChange={(e)=>setEmail(e.target.value)}
-                                className="w-full p-2 bg-[#f5f6f8] border border-[#ededed] rounded focus:outline-gray-500" 
+                                className="w-full p-2 bg-[#f5f6f8] border border-gray-300 rounded focus:outline-gray-500" 
                                 placeholder="Mobile number or email address"
                             />
                         </div>
@@ -68,7 +68,7 @@ export default function Home(){
                             <input
                                 type={type}
                                 onChange={(e)=>setPassword(e.target.value)} 
-                                className="w-full p-2 bg-[#f5f6f8] border border-[#ededed] rounded-tl rounded-bl focus:outline-gray-500 " 
+                                className="w-full p-2 bg-[#f5f6f8] border border-gray-300 rounded-tl rounded-bl focus:outline-gray-500 " 
                                 placeholder="Password"
                             />
                             {password.length> 0 && <button
@@ -86,12 +86,12 @@ export default function Home(){
                         </button>
                         <button className="w-full p-2 text-[#1878f3] text-center rounded">Forgetten Password?</button>
                     </div>
-                    <div className="relative flex justify-center items-center border-t border-[#ededed] mt-5 mb-7">
+                    <div className="relative flex justify-center items-center border-t border-gray-300 mt-5 mb-7">
                         <span className="absolute bg-white px-4 py-1">or</span>
                     </div>
                     <div className="flex justify-center">
                         <button
-                            className="w-9/12 px-2 py-1 mx-auto border border-[#ededed] text-center rounded"
+                            className="w-9/12 px-2 py-1 mx-auto border border-gray-300 text-center rounded"
                         >
                             Create new account
                         </button>
