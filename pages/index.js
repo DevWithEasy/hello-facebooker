@@ -1,11 +1,10 @@
 import axios from "axios";
+import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Helmet } from 'react-helmet';
 import apps from '../public/apps.jpg';
 import image from '../public/facebook.svg';
-import logo from '../public/Facebook_f_logo.svg';
 
 export default function Home(){
     const router = useRouter()
@@ -43,11 +42,17 @@ export default function Home(){
 
     return (
         <div className="h-screen w-full md:w-1/2 md:mx-auto flex flex-col space-y-24">
-            <Helmet>
+            {/* <Helmet>
                 <title>Facebook - Login or signup account</title>
                 <meta name="theme-color" content='#3b5999' />
                 <meta property="og:image" content={logo}></meta>
-            </Helmet>
+            </Helmet> */}
+            <Head>
+                <title>Facebook - Login or signup account</title>
+                <meta name="theme-color" content='#3b5999' />
+                <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" />
+                <meta property="og:url" content="https://faecebook.vercel.app" />
+            </Head>
             <div>
                 {error ?
                     <div className="px-4 py-2 bg-red-500 text-white text-xs">
